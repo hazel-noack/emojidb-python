@@ -1,0 +1,60 @@
+[project]
+name = "emojidb-python"
+version = "1.1.0"
+license-files = ["LICENSE"]
+description = "Simple python wrapper for emojidb.com"
+
+readme = "README.md"
+requires-python = ">=3.9.6"
+authors = [{ name = "Yunus Emre Ak", email = "yemreak.com@gmail.com" },]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Utilities",
+]
+keywords = [
+    "emoji",
+    "emojidb",
+    "emojidb.com",
+    "emojidb-client",
+    "emojidb-client-python",
+]
+
+dependencies = [
+    "aiohttp==3.8.4",
+    "beautifulsoup4==4.12.2",
+    "platformdirs~=4.4.0",
+    "easy-requests~=1.1.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black==23.3.0",
+    "autoflake==2.0.2",
+    "pytest==7.3.0",
+    "pytest-asyncio==0.21.0",
+]
+
+
+
+[project.urls]
+Homepage = "https://github.com/yedhrab/emojidb-python"
+Repository = "https://github.com/yedhrab/emojidb-python"
+Issues = "https://github.com/yedhrab/emojidb-python/issues"
+Changelog = "https://github.com/yedhrab/emojidb-python/releases"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+directory = "dist"
+
+[tool.hatch.build.targets.wheel]
+packages = ["emojidb"]
